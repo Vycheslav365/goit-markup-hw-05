@@ -145,22 +145,19 @@ body {
 	margin-right: 48px;
 	align-content: center;
 	align-self: center;
-
-}
-.top__line-nav-li :hover {
-	color: #2196F3;
 	transition: color 150ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.top__line-nav-li a:focus {
+.top__line-nav-li :hover,
+.top__line-nav-li :focus  {
 	color: #2196F3;
-	transition: color 250ms linear;
 }
 
 .top__line-nav-li:last-child {
 	margin-right: 300px;
 }
-.nav__li-1::after,.nav__li-2:after {
+.nav__li-1::after,
+.nav__li-2::after {
 	content: "";	
 	position: relative;
 	top: 29px;
@@ -189,34 +186,18 @@ body {
 .top__line-info-email{
 	margin-right: 30px;
 }
-/* .top__line-info-email svg{
-	fill: #757575;
-} */
 .top__line-info-icon {
 	margin-right: 10px;
 }
 
-.top__line-info-email :hover {
+.top__line-info-email :hover,
+.top__line-info-email :focus,
+.top__line-info-tel :hover,
+.top__line-info-tel :focus{
 	fill: #2196F3;
 	color: #2196F3;
 	transition:  fill 250ms linear, color 250ms linear;
-}
-.top__line-info-email :focus {
-	fill: #2196F3;
-	color: #2196F3;
-	transition:  fill 250ms linear, color 250ms linear;
-}
-
-.top__line-info-tel :hover {
-	fill: #2196F3;
-	color: #2196F3;
-	transition:  fill 250ms linear, color 250ms linear;
-}
-
-.top__line-info-tel :focus {
-	fill: #2196F3;
-	color: #2196F3;
-	transition:  fill 250ms linear, color 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* =====up__block======= */
@@ -225,7 +206,6 @@ body {
 	margin: 0 auto;
 	padding: 203px 0;
 	max-width: 1600px;
-	/* height: 600px; */
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -460,7 +440,8 @@ body {
 .team-social-link {
 	display: flex;
 	justify-content: center;
-
+transition:  fill 250ms linear, background 250ms linear;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
@@ -483,14 +464,9 @@ body {
 	height: 20px;
 }
 
-.team-social-link:hover {
-	background: #2196F3;
-	fill: #fff;
-	transition:  fill 250ms linear, background 250ms linear;
-}
-
+.team-social-link:hover,
 .team-social-link:focus {
-	background-color: #2196F3;
+	background: #2196F3;
 	fill: #fff;
 }
 
@@ -524,7 +500,8 @@ body {
 	box-sizing: border-box;
 	border-radius: 4px;
 	fill: #AFB1B8;
-
+	transition:  fill 250ms linear, border 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -534,18 +511,11 @@ body {
 	margin-right: 0;
 }
 
-.client-list-link:hover {
-	fill: #2196F3;
-	cursor: pointer;
-	border: 1px solid #2196F3;
-	transition:  fill 250ms linear, border 250ms linear;
-}
-
+.client-list-link:hover,
 .client-list-link:focus {
 	fill: #2196F3;
 	cursor: pointer;
 	border: 1px solid #2196F3;
-	transition:  fill 250ms linear, border 250ms linear;
 }
 
 /* ========footer========= */
@@ -580,32 +550,24 @@ a.footer__logo {
 	color: #FFFFFF;
 }
 
-.footer__address-email {
-	font-style: normal;
-	font-size: 14px;
-	line-height: 1.7;
-	letter-spacing: 0.03em;
-	color: rgba(255, 255, 255, 0.6);
-}
-
+.footer__address-email,
 .footer__address-tell {
 	font-style: normal;
 	font-size: 14px;
 	line-height: 1.7;
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
+	transition: color 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .footer__address-email:hover,
 .footer__address-tell:hover {
 	color: #2196F3;
-	transition: color 250ms linear;
 }
 
 .footer__address-email:focus,
 .footer__address-tell:focus {
 	color: #2196F3;
-	transition: color 250ms linear;
 }
 
 .container-flex-footer {
@@ -648,6 +610,8 @@ a.footer__logo {
 	background-position: center;
 	background-color: rgba(255, 255, 255, 0.1);
 	margin-right: 10px;
+	transition: background 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon1 {
@@ -667,14 +631,9 @@ a.footer__logo {
 	margin-right: 0;
 }
 
-.footer-social-icon:hover {
-	background-color: #2196f3;
-	transition: background 250ms linear;
-}
-
+.footer-social-icon:hover,
 .footer-social-icon:focus {
 	background-color: #2196f3;
-	transition: background 250ms linear;
 }
 
 /* ========portfolio========= */
@@ -701,7 +660,9 @@ a.footer__logo {
 	display: block;
 	background: #F5F4FA;
 	border-radius: 4px;
-	white-space: nowrap;
+	white-space: nowrap;	
+	transition: color 250ms linear, background 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-element button:hover,
@@ -710,8 +671,6 @@ a.footer__logo {
 	color: #fff;
 	background: #2196F3;
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: color 250ms linear, background 250ms linear;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project {
 	display: flex;
@@ -722,10 +681,13 @@ a.footer__logo {
 .project-content {
 	margin: 0 30px 30px 0;
 	background: #fff;
+
 }
 
 .project-body {
 	display: block;
+	transition: box-shadow 250ms linear;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-content:nth-child(3n+3) {
@@ -735,7 +697,6 @@ a.footer__logo {
 .project-body:hover,
 .project-body:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-	transition: box-shadow 250ms linear;
 }
 
 
@@ -756,7 +717,6 @@ a.footer__logo {
 	padding: 63px 24px;
 	background: rgba(33, 150, 243, 0.9);
 	
-
 	font-size: 18px;
 	line-height: 1.5;
 	letter-spacing: 0.03em;
@@ -766,9 +726,7 @@ a.footer__logo {
 .project-content :hover .project-content-title,
 .project-content :focus .project-content-title {
 	opacity: 1;
-	transform: translatey(-0);
-	transition: transform 250ms linear;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translatey(-0);	
 }
 
 .project-border {
@@ -821,7 +779,6 @@ a.footer__logo {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
 	background: #FFFFFF;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
